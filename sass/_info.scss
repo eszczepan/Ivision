@@ -1,0 +1,30 @@
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+
+  &__image{
+    margin-bottom: 3rem;
+  }
+
+  &__h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+
+  &__break{
+    font-size: 3.7rem;
+    margin: 5rem 0;
+  }
+
+  &__paragraph{
+    font-size: 1.3rem;
+  }
+
+  :nth-child(6){
+    margin: 2rem 0;
+  }
+}

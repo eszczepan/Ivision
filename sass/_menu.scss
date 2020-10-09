@@ -1,0 +1,30 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+  border-bottom: 1px solid $border-color;
+
+  &__title{
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  &__item {
+    margin: 0 4rem;
+    font-size: 1.3rem;
+  }
+
+  &__links{
+    display: flex;
+  }
+  &__link{
+    margin: 0 1rem;
+  }
+}
