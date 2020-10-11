@@ -1,0 +1,86 @@
+.lightbox{
+  background-color: rgba($color: $primary, $alpha: 0.9);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  &__inner{
+    background-color: $bg-color;
+    padding: 2rem;
+    position: fixed;
+    width: 45%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__header{
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__h3{
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  &__button{
+    font-size: 2rem;
+    background-color: transparent;
+    color: $primary;
+    border: none;
+    margin-right: 2rem;
+    cursor: pointer;
+  }
+
+  &__list{
+    padding-left: 1rem;
+    list-style: none;
+    overflow-y: auto;
+    height: 90%;
+
+    &::-webkit-scrollbar-track{
+      border-radius: 10px;
+      background-color: #F5F5F5;
+      }
+    
+    &::-webkit-scrollbar{
+      width: 4px;
+      background-color: #F5F5F5;
+    }
+    
+    &::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+      background-color: $primary;
+    }
+  }
+
+
+  &__item{
+    padding: 2rem 0;
+    border-top: 1px solid $border-color;
+  }
+
+  &__job{
+    color: $primary;
+    font-weight: 500;
+  }
+
+  &__city{
+    font-size: 1.2rem;
+    color: $secondary;
+    font-weight: 500;
+  }
+}
+
+.lightbox.closed{
+  display: none;
+}
