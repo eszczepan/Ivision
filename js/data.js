@@ -39,6 +39,18 @@ const jobs = [
     job: "Junior Product Designer",
     city: "Berlin"
   },
+  {
+    job: "Senior Product Designer",
+    city: "Berlin"
+  },
+  {
+    job: "Junior Front-End Developer",
+    city: "Warsaw"
+  },
+  {
+    job: "UX Designer",
+    city: "Berlin"
+  },
 ];
 
 export default jobs;

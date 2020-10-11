@@ -13,16 +13,23 @@
   <nav class="menu">
     <h1 class="menu__logo">www.ivision.pl</h1>
     <ul class="menu__list">
-      <li class="menu__item">strona główna</li>
-      <li class="menu__item">usługi</li>
-      <li class="menu__item">o firmie</li>
-      <li class="menu__item">kontakt</li>
+      <li class="menu__item"><a href="#" class="menu__link">strona główna</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">usługi</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">o firmie</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">kontakt</a></li>
       <div class="menu__links">
-        <li class="menu__link"><img src="./img/facebook.svg" alt="facebook-icon"></li>
-        <li class="menu__link"><img src="./img/instagram.svg" alt="instagram-icon"></li>
+        <li class="menu__link--social"><a href="#"><img src="./img/facebook.svg" alt="facebook-icon"></a></li>
+        <li class="menu__link--social"><a href="#"><img src="./img/instagram.svg" alt="instagram-icon"></a></li>
       </div>
     </ul>
   </nav>
+
+  <button class="burger">
+    <span class="burger__box">
+      <span class="burger__inner"></span>
+    </span>
+  </button>
+
   <main>
     <div class="container">
       <header class="header">
@@ -35,7 +42,7 @@
       </header>
       <section class="info">
         <img class="info__image" src="./img/PNG_Global.png" alt="">
-        <h3 class="info__h2">IVN Sp. z o. o.</h3>
+        <h2 class="info__h2">IVN Sp. z o. o.</h2>
         <span class="info__break">-</span>
         <p class="info__paragraph">Wieniawskiego 66/2</p>
         <p class="info__paragraph">31-436 Kraków, Polska</p>

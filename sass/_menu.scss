@@ -5,7 +5,7 @@
   padding: 2rem 5rem;
   border-bottom: 1px solid $border-color;
 
-  &__title{
+  &__logo{
     font-size: 1.8rem;
     font-weight: 600;
   }
@@ -24,7 +24,149 @@
   &__links{
     display: flex;
   }
+
   &__link{
+    color: $font-color;
+    text-decoration: none;
+    padding-bottom: 0.3rem;
+    &:hover{
+      border-bottom: 1px solid $primary;
+    }
+  }
+
+  &__link--social{
     margin: 0 1rem;
+  }
+}
+
+
+// BURGER MENU
+
+@mixin burger-line{
+  width: 30%;
+  height: 1.5px;
+  background-color: $primary;
+  position: absolute;
+}
+
+.burger{
+  background-color: white;
+  width: 4.8rem;
+  height: 4.8rem;
+  position: absolute;
+  top: 3%;
+  left: 5%;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px #0000001A;
+  cursor: pointer;
+  display: none;
+
+  &__box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__inner{
+    @include burger-line;
+    transition: background-color .3s .1s ease-in-out;
+
+    &::before, &::after{
+      @include burger-line;
+      content: '';
+      left: 0;
+      transition: transform .3s .1s ease-in-out;
+    }
+
+    &::before{
+      top: -0.5rem;
+      width: 100%;
+    }
+
+    &::after{
+      top: 0.5rem;
+      width: 60%;
+    }
+  }
+
+
+  &--active &__inner{
+    background-color: transparent;
+  }
+
+  &--active &__inner::before{
+    transform: translateY(0.5rem) rotate(45deg);
+    width: 110%;
+  }
+
+  &--active &__inner::after{
+    transform: translateY(-0.5rem) rotate(-45deg);
+    width: 110%;
+  }
+}
+
+
+// MEDIA QUERIES
+
+@media (max-width: 1024px){
+  .menu{
+    padding: 2rem 2rem;
+
+    &__item{
+      margin: 0 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .burger{
+    display: block;
+  }
+
+  .menu{
+    background-color: $primary;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 2rem 0;
+    transform: translateX(-100%);
+    transition: transform .3s .1s ease-in-out;
+
+    &__logo{
+      display: none;
+    }
+
+    &__list{
+      justify-content: space-evenly;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__item{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 10rem;
+      text-align: center;
+    }
+
+    &__link{
+      width: 100%;
+      padding: 2rem 6rem;
+      color: white;
+      &:hover{
+        background-color: white;
+        color: $primary;
+      }
+    }
+  }
+
+  .menu.open{
+    transform: translateX(0);
   }
 }

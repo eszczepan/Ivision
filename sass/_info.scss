@@ -28,3 +28,13 @@
     margin: 2rem 0;
   }
 }
+
+@media (max-width: 768px){
+  .info{
+    width: 80%;
+    margin: 5rem 0;
+    &__break{
+      margin: 2rem 0;
+    }
+  }
+}

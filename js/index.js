@@ -1,5 +1,9 @@
 import jobs from './data.js';
+import generateJobs from './generateJobs.js';
 
+generateJobs(jobs);
+
+// LIGHTBOX
 const lightbox = document.querySelector('.lightbox');
 const headerBtn = document.querySelector('.header__button');
 const lightboxBtn = document.querySelector('.lightbox__button');
@@ -26,25 +30,14 @@ lightboxBtn.addEventListener('click', closeModal);
 lightbox.addEventListener("click", handleClickOutside);
 window.addEventListener("keyup", handleKeyUp);
 
-const generateJobs = (data) => {
-  const lightboxList = lightbox.querySelector('.lightbox__list');
-  data.map(element => {
-    const item = document.createElement('li');
-    item.classList.add("lightbox__item");
 
-    const pJob = document.createElement('p');
-    pJob.classList.add("lightbox__job");
-    pJob.innerText = element.job;
+// BURGER MENU 
+const burger = document.querySelector('.burger');
+const menu = document.querySelector('.menu');
 
-    const pCity = document.createElement('p');
-    pCity.classList.add("lightbox__city");
-    pCity.innerText = element.city;
-
-    item.appendChild(pJob);
-    item.appendChild(pCity);
-    
-    lightboxList.appendChild(item);
-  })
+const handleClick = () => {
+  menu.classList.toggle('open');
+  burger.classList.toggle('burger--active');
 }
 
-generateJobs(jobs);
+burger.addEventListener('click', handleClick);
